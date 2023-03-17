@@ -1,0 +1,203 @@
+@mixin bgc($bg: null, $color: null) {
+	color: $color;
+	background: $bg;
+}
+
+.exchange-manager-wrapper {
+	margin: 10px 20px 0 2px;
+	// font-family: "Poppins", sans-serif;
+
+	.flex-start {
+		display: flex;
+		gap: 1rem;
+	}
+
+	.admin-logo {
+		max-width: 50px;
+		width: 100%;
+	}
+
+	.text-sm {
+		font-size: 0.8rem;
+	}
+
+	.text-bold {
+		font-weight: 900;
+	}
+
+	.btn {
+		display: inline-block;
+		outline: none;
+		transition: 0.4s ease-in;
+
+		&,
+		&:hover,
+		&:focus {
+			border: none !important;
+			box-shadow: none !important;
+		}
+	}
+
+	.l-bg- {
+		&green {
+			@include bgc(
+				linear-gradient(135deg, #23bdb8, #43e794) !important,
+				#ffffff
+			);
+		}
+
+		&purple {
+			@include bgc(
+				linear-gradient(135deg, #9a56ff, #e36cd9) !important,
+				#ffffff
+			);
+		}
+
+		&cyan {
+			@include bgc(
+				linear-gradient(135deg, #289cf5, #84c0ec) !important,
+				#ffffff
+			);
+		}
+
+		&orange {
+			@include bgc(
+				linear-gradient(135deg, #f48665, #fda23f) !important,
+				#ffffff
+			);
+		}
+	}
+
+	.card {
+		position: relative;
+		@include bgc(#ffffff, #ffffff);
+		border: none;
+		max-width: 100%;
+		margin-bottom: 30px;
+		z-index: 0;
+		overflow: hidden;
+		padding: 15px;
+		box-shadow: 0 0.46875rem 2.1875rem rgba(90, 97, 105, 0.1),
+			0 0.9375rem 1.40625rem rgba(90, 97, 105, 0.1),
+			0 0.25rem 0.53125rem rgba(90, 97, 105, 0.12),
+			0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);
+
+		& .card-icon {
+			position: absolute;
+			text-align: center;
+			line-height: 50px;
+			color: #000;
+			right: -5px;
+			top: 20px;
+			opacity: 0.1;
+			z-index: -1;
+			font-size: 110px;
+			width: 110px;
+			height: 50px;
+			text-shadow: 3px 7px rgba(0, 0, 0, 0.3);
+		}
+
+		& .card-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		& .card-header,
+		& .card-body,
+		& .card-footer {
+			background-color: transparent;
+			padding: 20px 25px;
+		}
+
+		& .card-circle {
+			display: inline-flex;
+			text-align: center;
+			border-radius: 50%;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			height: 45px;
+			width: 45px;
+			box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14),
+				0 7px 10px -5px rgba(76, 175, 80, 0.4);
+		}
+
+		& p {
+			font-weight: 500;
+			font-size: 0.8rem;
+		}
+	}
+
+	.progress {
+		-webkit-box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.15);
+		box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.15);
+		height: 8px;
+
+		&.table-progress {
+			-webkit-box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.15);
+			box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.15);
+			height: 4px;
+		}
+	}
+
+	table.dataTable {
+		border-collapse: collapse !important;
+	}
+
+	.table-striped tbody tr:nth-of-type(2n + 1) {
+		background-color: rgba(0, 0, 0, 0.02);
+	}
+
+	.table td,
+	.table th {
+		border-top: none;
+	}
+
+	.table:not(.table-sm):not(.table-md):not(.dataTable) td,
+	.table:not(.table-sm):not(.table-md):not(.dataTable) th {
+		padding: 0 10px;
+		height: 60px;
+		vertical-align: middle;
+	}
+
+	.custom-control {
+		line-height: 1.6rem;
+	}
+
+	.page-item {
+		.page-link {
+			color: #23bdb8;
+			border: none;
+
+			&:focus {
+				box-shadow: none;
+			}
+		}
+
+		&.active .page-link {
+			@extend .l-bg-green;
+		}
+	}
+
+	.form-control {
+		&:focus {
+			box-shadow: none !important;
+		}
+	}
+
+	.wp-core-ui select {
+		border-color: #23bdb8;
+
+		&:focus {
+			box-shadow: none;
+		}
+
+		&:hover {
+			color: #23bdb8;
+		}
+	}
+}
