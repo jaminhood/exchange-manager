@@ -2,11 +2,11 @@
 
 /**
  * Plugin Name: Exchange Manager
- * Plugin URI: https://github.com/chrishalogen
+ * Plugin URI: https://github.com/jaminhood/exchange-manager
  * Version: 1.0.0
  * Description: This plugin will provide backend api support for mobile applications and also create a user dashboard as well on the website
  * Author: JaminHood
- * Author URI: https://github.com/chrishalogen
+ * Author URI: https://github.com/jaminhood
  * License: GPU
  * Text Domain: exchange-manager
  */
